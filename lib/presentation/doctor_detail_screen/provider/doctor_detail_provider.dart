@@ -37,10 +37,10 @@ class DoctorDetailProvider extends ChangeNotifier {
     int index,
     bool value,
   ) {
-    doctorDetailModelObj.amItemList.forEach((element) {
+    doctorDetailModelObj.doctorItemList.forEach((element) {
       element.isSelected = false;
     });
-    doctorDetailModelObj.amItemList[index].isSelected = value;
+    doctorDetailModelObj.doctorItemList[index].isSelected = value;
     notifyListeners();
   }
 
@@ -60,14 +60,12 @@ class DoctorDetailProvider extends ChangeNotifier {
   }
 
   void _onDoctorsGetSuccess(GetDoctorsGetResp resp) {
-    doctorDetailModelObj.drMarcusHorizon =
-        getDoctorsGetResp.data!.name!.toString();
-    doctorDetailModelObj.chardiologist =
+    doctorDetailModelObj.name = getDoctorsGetResp.data!.name!.toString();
+    doctorDetailModelObj.speciality =
         getDoctorsGetResp.data!.speciality!.toString();
     doctorDetailModelObj.distance =
         getDoctorsGetResp.data!.distance!.toString();
-    doctorDetailModelObj.fortySeven =
-        getDoctorsGetResp.data!.rating!.toString();
+    doctorDetailModelObj.rating = getDoctorsGetResp.data!.rating!.toString();
     notifyListeners();
   }
 

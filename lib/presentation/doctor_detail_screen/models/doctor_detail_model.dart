@@ -1,14 +1,14 @@
 import 'time_slot_item_model.dart';
 
 class DoctorDetailModel {
-  String drMarcusHorizon = "";
+  String name = "";
 
-  String chardiologist = "";
+  String speciality = "";
 
-  String fortySeven = "";
+  String rating = "";
 
   String distance = "";
 
-  List<TimeSlotItemModel> amItemList =
+  List<TimeSlotItemModel> doctorItemList =
       List.generate(9, (index) => TimeSlotItemModel());
 }

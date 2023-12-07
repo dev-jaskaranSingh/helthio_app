@@ -38,14 +38,14 @@ class CategoriesItemWidget extends StatelessWidget {
                 borderRadius: BorderRadiusStyle.roundedBorder10,
               ),
               child: CustomImageView(
-                imagePath: categoriesItemModelObj.orthopaedics,
+                imagePath: categoriesItemModelObj.image,
                 height: 40.v,
                 width: 30.h,
               ),
             ),
             SizedBox(height: 10.v),
             Text(
-              categoriesItemModelObj.orthopaedics1!,
+              categoriesItemModelObj.name!,
               style: CustomTextStyles.labelLargeGray800,
               overflow: TextOverflow.ellipsis,
             ),

@@ -70,8 +70,8 @@ class DoctorDetailScreenState extends State<DoctorDetailScreen> {
                                     children: [
                                       Selector<DoctorDetailProvider, String?>(
                                           selector: (context, provider) =>
-                                              provider.doctorDetailModelObj!
-                                                  .drMarcusHorizon,
+                                              provider
+                                                  .doctorDetailModelObj!.name,
                                           builder: (context, drMarcusHorizon,
                                               child) {
                                             return Text(drMarcusHorizon ?? "",
@@ -82,7 +82,7 @@ class DoctorDetailScreenState extends State<DoctorDetailScreen> {
                                       Selector<DoctorDetailProvider, String?>(
                                           selector: (context, provider) =>
                                               provider.doctorDetailModelObj!
-                                                  .chardiologist,
+                                                  .speciality,
                                           builder:
                                               (context, chardiologist, child) {
                                             return Text(chardiologist ?? "",
@@ -107,7 +107,7 @@ class DoctorDetailScreenState extends State<DoctorDetailScreen> {
                                                 selector: (context, provider) =>
                                                     provider
                                                         .doctorDetailModelObj!
-                                                        .fortySeven,
+                                                        .rating,
                                                 builder: (context, fortySeven,
                                                     child) {
                                                   return Text(fortySeven ?? "",
@@ -221,9 +221,9 @@ class DoctorDetailScreenState extends State<DoctorDetailScreen> {
           runSpacing: 9.v,
           spacing: 9.h,
           children: List<Widget>.generate(
-              provider.doctorDetailModelObj.amItemList.length, (index) {
+              provider.doctorDetailModelObj.doctorItemList.length, (index) {
             TimeSlotItemModel model =
-                provider.doctorDetailModelObj.amItemList[index];
+                provider.doctorDetailModelObj.doctorItemList[index];
             return TimeSlotItemWidget(model, onSelectedChipView: (value) {
               provider.onSelectedChipView(index, value);
             });

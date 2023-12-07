@@ -5,16 +5,14 @@ import 'slider_item_model.dart';
 
 class HomeModel {
   List<SliderItemModel> sliderItemList = [
-    SliderItemModel(earlyProtection: "Early protection for\nyour family health")
+    SliderItemModel(title: "Early protection for\nyour family health")
   ];
 
   List<CategoriesItemModel> categoriesItemList = [
     CategoriesItemModel(
-        orthopaedics: ImageConstant.img617717311,
-        orthopaedics1: "Orthopaedics"),
+        image: ImageConstant.img617717311, name: "Orthopaedics"),
     CategoriesItemModel(
-        orthopaedics: ImageConstant.img6177173112,
-        orthopaedics1: "Ophthalmology")
+        image: ImageConstant.img6177173112, name: "Ophthalmology")
   ];
 
   List<AppointmentItemModel> appointmentItemList = [

@@ -46,8 +46,8 @@ class HomeProvider extends ChangeNotifier {
     var gridhomeItemModelList = <CategoriesItemModel>[];
     for (var element in getGetDashboardListResp.data?.categories ?? []) {
       var gridhomeItemModel = CategoriesItemModel();
-      gridhomeItemModel.orthopaedics1 = element.name ?? '';
-      gridhomeItemModel.orthopaedics = element.image ?? '';
+      gridhomeItemModel.name = element.name ?? '';
+      gridhomeItemModel.image = element.image ?? '';
       gridhomeItemModelList.add(gridhomeItemModel);
     }
     homeModelObj.categoriesItemList = gridhomeItemModelList;

@@ -88,7 +88,7 @@ class SliderItemWidget extends StatelessWidget {
                       SizedBox(
                         width: 164.h,
                         child: Text(
-                          sliderItemModelObj.earlyProtection!,
+                          sliderItemModelObj.title!,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style:

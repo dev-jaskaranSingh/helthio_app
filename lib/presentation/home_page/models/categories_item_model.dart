@@ -1,18 +1,18 @@
 /// This class is used in the [gridhome_item_widget] screen.
 class CategoriesItemModel {
   CategoriesItemModel({
-    this.orthopaedics,
-    this.orthopaedics1,
+    this.image,
+    this.name,
     this.id,
   }) {
-    orthopaedics = orthopaedics ?? "...";
-    orthopaedics1 = orthopaedics1 ?? "Orthopaedics";
+    image = image ?? "...";
+    name = name ?? "Orthopaedics";
     id = id ?? "";
   }
 
-  String? orthopaedics;
+  String? image;
 
-  String? orthopaedics1;
+  String? name;
 
   String? id;
 }

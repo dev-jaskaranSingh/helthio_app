@@ -1,15 +1,14 @@
 /// This class is used in the [sliderone_item_widget] screen.
 class SliderItemModel {
   SliderItemModel({
-    this.earlyProtection,
+    this.title,
     this.id,
   }) {
-    earlyProtection =
-        earlyProtection ?? "Early protection for\nyour family health";
+    title = title ?? "Early protection for\nyour family health";
     id = id ?? "";
   }
 
-  String? earlyProtection;
+  String? title;
 
   String? id;
 }
